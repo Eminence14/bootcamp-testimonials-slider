@@ -22,19 +22,6 @@ body {
     padding: 20px;
     position: relative;
 }
-.slides {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-}
-.slides.two {
-    display: none;
-}
-.slides.two.active {
-    display: block;
-}
 .image {
     background-image: url('/images/pattern-bg.svg');
     background-size: 100%;
@@ -62,10 +49,8 @@ body {
     position: relative;
     z-index: 1;
 }
-.prev, .next {
+.button {
     cursor: pointer;
-}
-.prev img, .next img {
     width: 9px;
     padding: 2px 0;
 }

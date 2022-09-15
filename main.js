@@ -1,16 +1,23 @@
-const prevBtn = document.querySelector('.prev img')
-const nextBtn = document.querySelector('.next img')
-const slideOne = document.querySelector('.slides.one')
-const slideTwo = document.querySelector('.slides.two')
+const slide1 = document.querySelector('.slides:nth-child(1)')
+const slide2 = document.querySelector('.slides:nth-child(2)')
+const btnSlide1 = document.querySelectorAll('.btn-slide1')
+const btnSlide2 = document.querySelectorAll('.btn-slide2')
 
-prevBtn.addEventListener('click', showSlide1)
-nextBtn.addEventListener('click', showSlide2)
+for (let slide of btnSlide1)
+    slide.addEventListener('click', nextSlide)
+for (let slide of btnSlide2)
+    slide.addEventListener('click', nextSlideAgain)
 
-function showSlide2() {
-    slideOne.style.display = 'none'
-    slideTwo.style.display = 'block'
+function nextSlide() {
+    if (slide1.style.display === 'block') {
+        slide1.style.display = 'none'
+        slide2.style.display = 'block'
+    }
 }
-function showSlide1() {
-    slideOne.style.display = 'block'
-    slideTwo.style.display = 'none'
+
+function nextSlideAgain() { 
+    if (slide2.style.display === 'block') {
+        slide2.style.display = 'none'
+        slide1.style.display = 'block'
+    }
 }
