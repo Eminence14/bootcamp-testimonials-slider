@@ -1,83 +1,134 @@
 :root {
-    --darkBlue: hsl(240, 38%, 20%);
-    --grayBlue: hsl(240, 18%, 77%);
+  --darkBlue: hsl(240, 38%, 20%);
+  --grayBlue: hsl(240, 18%, 77%);
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: Inter;
-    src: url('./assets/fonts/Inter-VariableFontWght.ttf');
+  font-family: Inter;
+  src: url("./assets/fonts/Inter-VariableFontWght.ttf");
 }
 
 body {
-    font-family: Inter;
-    font-size: 18px;
-    text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  text-align: center;
 }
 .container {
-    padding: 20px;
-    position: relative;
+  padding: 20px;
+  position: relative;
 }
 .image {
-    background-image: url('/images/pattern-bg.svg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding: 40px;
-    margin: 0 auto;
+  background-image: url("/images/pattern-bg.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
 }
-.image img#tanya {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 8px 30px -15px var(--darkBlue);
+.image img.hero {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 8px 30px -15px var(--darkBlue);
 }
 .buttons {
-    width: 70px;
-    height: 35px;
-    margin: 0 auto;
-    margin-top: -23px;
-    border-radius: 20px;
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    position: relative;
-    z-index: 1;
+  width: 70px;
+  height: 35px;
+  margin: 0 auto;
+  margin-top: -23px;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  z-index: 1;
 }
 .button {
-    cursor: pointer;
-    width: 9px;
-    padding: 2px 0;
+  cursor: pointer;
+  width: 9px;
+  padding: 2px 0;
 }
 .description {
-    padding: 17px 10px;
-    background-image: url('/images/pattern-quotes.svg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 50px;
+  padding: 17px 10px;
+  background-image: url("/images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 50px;
 }
 .texts {
-    color: var(--darkBlue);
-    line-height: 25px;
+  color: var(--darkBlue);
+  line-height: 25px;
 }
 .name {
-    padding-top: 20px;
-    font-weight: 900;
-    color: var(--darkBlue);
+  padding-top: 20px;
+  font-weight: 900;
+  color: var(--darkBlue);
 }
 .profession {
-    font-size: 0.9em;
-    padding-top: 5px;
-    color: var(--grayBlue);
+  font-size: 0.9em;
+  padding-top: 5px;
+  color: var(--grayBlue);
 }
-@media screen and (min-width:600px) {
-    .container {
-        max-width: 550px;
-        margin: 0 auto;
-    }
+@media screen and (min-width: 600px) {
+  .container {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1300px) {
+  body {
+    text-align: left;
+    padding: 10px;
+    font-size: 32px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .slides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .image {
+    position: relative;
+    order: 2;
+  }
+  .hero {
+    position: relative;
+    width: 100%;
+    min-width: 450px;
+    max-width: 500px;
+  }
+  .buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    z-index: 20;
+    height: 45px;
+    width: 80px;
+  }
+  .description {
+    background-position: 100px top;
+background-size: 100px;
+padding-top: 65px;
+  }
+  .texts {
+    line-height: 40px;
+    font-size: .85em;
+    letter-spacing: 1px;
+  }
+  .name, .profession {
+    display: inline-block;
+    font-size: .7em;
+  }
 }

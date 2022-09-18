@@ -8,7 +8,14 @@ for (let slide of btnSlide1)
 for (let slide of btnSlide2)
     slide.addEventListener('click', nextSlideAgain)
 
+if (window.innerWidth > 1300) 
+    slide1.style.display = 'flex'
+
 function nextSlide() {
+    if (slide1.style.display === 'flex' && window.innerWidth > 1300) {
+        slide1.style.display = 'none'
+        slide2.style.display = 'flex'
+    }
     if (slide1.style.display === 'block') {
         slide1.style.display = 'none'
         slide2.style.display = 'block'
@@ -16,6 +23,10 @@ function nextSlide() {
 }
 
 function nextSlideAgain() { 
+    if (slide2.style.display === 'flex' && window.innerWidth > 1300) {
+        slide2.style.display = 'none'
+        slide1.style.display = 'flex'
+    }
     if (slide2.style.display === 'block') {
         slide2.style.display = 'none'
         slide1.style.display = 'block'
